@@ -8,7 +8,7 @@ function App() {
     <div className=" bg-black text-white w-screen h-max flex flex-col">
       <Navbar/>
       <Routes>
-        <Route index element={<Homepage/>}/>
+        <Route index path="/movie-space" element={<Homepage/>}/>
         <Route path="/movie/:id" element={<h1>Movie detail page</h1>}/>
         <Route path="/movies/:type" element={<MovieList/>}/>
         <Route path="/*" element={<h1>Error Page</h1>}/>
