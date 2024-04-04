@@ -22,9 +22,9 @@ const Navbar = () => {
             <span class="ml-3 text-xl">MovieSpace</span>
           </Link>
           <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center cursor-pointer">
-            <Link to="/popular" class="mr-5 hover:text-gray-900">Popular</Link>
-            <Link to="/top-rated" class="mr-5 hover:text-gray-900">Top Rated</Link>
-            <Link to="/upcoming" class="mr-5 hover:text-gray-900">Upcoming</Link>
+            <Link to="/movies/popular" class="mr-5 hover:text-gray-900">Popular</Link>
+            <Link to="/movies/top_rated" class="mr-5 hover:text-gray-900">Top Rated</Link>
+            <Link to="/movies/upcoming" class="mr-5 hover:text-gray-900">Upcoming</Link>
           </nav>
           <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
             Button

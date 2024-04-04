@@ -1,19 +1,17 @@
 import { Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage";
 import Navbar from "./components/Navbar";
-import Popular from "./pages/Popular";
-import TopRated from "./pages/TopRated";
-import Upcoming from "./pages/Upcoming";
+import MovieList from "./components/MovieList";
         
 function App() {
   return (
-    <div className=" bg-black text-white w-screen h-screen flex flex-col">
+    <div className=" bg-black text-white w-screen h-max flex flex-col">
       <Navbar/>
       <Routes>
         <Route index element={<Homepage/>}/>
-        <Route path="/popular" element={<Popular/>}/>
-        <Route path="/top-rated" element={<TopRated/>}/>
-        <Route path="/upcoming" element={<Upcoming/>}/>
+        <Route path="/movie/:id" element={<h1>Movie detail page</h1>}/>
+        <Route path="/movies/:type" element={<MovieList/>}/>
+        <Route path="/*" element={<h1>Error Page</h1>}/>
       </Routes>
     </div>
   );

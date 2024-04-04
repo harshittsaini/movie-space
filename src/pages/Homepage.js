@@ -3,6 +3,8 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 import { FaStar } from "react-icons/fa";
 import './Homepage.css'
+import { Link } from "react-router-dom";
+import MovieList from "../components/MovieList";
 
 const Homepage = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -16,7 +18,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div className="flex h-screen ">
+    <div className="flex h-max ">
       <div>
         <Carousel
           autoPlay={true}
@@ -26,7 +28,7 @@ const Homepage = () => {
           transitionTime={3}
         >
           {popularMovies.map((movie) => (
-            <div className="poster">
+            <Link style={{textDecoration:"none",color:"white"}} to={`/movie/${movie.id}`}>
 
               {/* image  */}
               <div className="posterImage">
@@ -58,9 +60,11 @@ const Homepage = () => {
 
               </div>
 
-            </div>
+            </Link>
           ))}
         </Carousel>
+
+        <MovieList />
       </div>
     </div>
   );
