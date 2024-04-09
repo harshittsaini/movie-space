@@ -12,7 +12,7 @@ const MovieDetail = () => {
             `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US`
           )
             .then((res) => res.json())
-            .then((data) => setMovieDetail(data.results));
+            .then((data) => setMovieDetail(data));
             window.scrollTo(0, 0);
     }, [id])
     
